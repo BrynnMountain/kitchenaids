@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>KitchenAids</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -49,6 +49,11 @@
                 font-size: 84px;
             }
 
+            .tagline {
+                font-size: 44px;
+                padding-bottom: 50px;
+            }
+
             .links > a {
                 color: #636b6f;
                 padding: 0 25px;
@@ -57,10 +62,6 @@
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
             }
         </style>
     </head>
@@ -75,7 +76,10 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    KitchenAids
+                </div>
+                <div class="tagline m-b-md">
+                    Electronically Transmitted Recipe's.
                 </div>
 
                 <div class="links">
