@@ -20,5 +20,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 Route::get('/box/create', 'BoxController@create');
 Route::post('/box/create', 'BoxController@store');
-Route::get('/recipe/create', 'RecipeController@create');
+Route::get('/box/{id}/recipe/create', 'RecipeController@create');
 Route::post('/recipe/create', 'RecipeController@store');

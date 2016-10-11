@@ -28,7 +28,7 @@ class HomeController extends Controller
     public function index()
     {
         return view('home', [
-            'boxes' => Box::where('user_id', Auth::id())->orderBy('name')->get(),
+            'user' => Auth::user(),
         ]);
     }
 }

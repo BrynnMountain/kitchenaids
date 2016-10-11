@@ -15,4 +15,14 @@ class Box extends Model
         'user_id',
         'name',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
+
+    public function recipes()
+    {
+        return $this->hasMany('App\Recipe');
+    }
 }

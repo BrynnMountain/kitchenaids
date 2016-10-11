@@ -29,6 +29,6 @@ class User extends Authenticatable
 
     public function boxes()
     {
-        return $this->hasMany('App\Box', 'user_id');
+        return $this->hasMany('App\Box');
     }
 }

@@ -11,6 +11,7 @@
     <title>{{ config('app.name', 'KitchenAids') }}</title>
 
     <!-- Styles -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     <link href="/css/app.css" rel="stylesheet">
 
     <!-- Scripts -->
