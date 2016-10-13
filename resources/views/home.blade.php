@@ -11,7 +11,7 @@
         @foreach($user->boxes as $box)
             <div class="col-xs-12 col-sm-4">
                 <div class="panel panel-default">
-                    <div class="panel-heading">{{ $box->name }}</div>
+                    <div class="panel-heading">{{$box->name}}</div>
 
                     <div class="panel-body">
                         <div class="list-group">
