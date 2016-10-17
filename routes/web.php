@@ -15,8 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Route::get('/about', function () {
+    return view('/pages/about');
+});
 
+Route::get('/contact', function () {
+    return view('/pages/contact');
+});
+
+Auth::routes();
 Route::get('/home', 'HomeController@index');
 Route::get('/box/create', 'BoxController@create');
 Route::post('/box/create', 'BoxController@store');
