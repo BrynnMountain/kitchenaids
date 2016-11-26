@@ -9,6 +9,7 @@
     </div>
     <div class="row">
         @foreach($user->boxes as $box)
+            <?php $boxCounter++; ?>
                 <div class="col-xs-12 col-sm-4">
                     <div class="panel panel-default">
                         <div class="panel-heading">{{$box->name}}</div>
@@ -22,7 +23,10 @@
                         </div>
                     </div>
                 </div>
-
+            @if($boxCounter % 3 == 0)
+                </div>
+                <div class="row">
+            @endif
         @endforeach
     </div>
 </div>

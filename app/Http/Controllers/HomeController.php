@@ -29,6 +29,7 @@ class HomeController extends Controller
     {
         return view('home', [
             'user' => Auth::user(),
+            'boxCounter' => 0,
         ]);
     }
 }
