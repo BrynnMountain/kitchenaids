@@ -24,8 +24,15 @@ Route::get('/contact', function () {
 });
 
 Auth::routes();
+
+// Dashboard Route
 Route::get('/home', 'HomeController@index');
+
+// Box Routes
 Route::get('/box/create', 'BoxController@create');
 Route::post('/box/create', 'BoxController@store');
+
+// Recipe Routes
 Route::get('/box/{id}/recipe/create', 'RecipeController@create');
 Route::post('/recipe/create', 'RecipeController@store');
+Route::get('/recipes/{id}', 'RecipeController@show');

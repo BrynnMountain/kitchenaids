@@ -42,4 +42,13 @@ class RecipeController extends Controller
 
         return redirect('/home');
     }
+
+    public function show($id)
+    {
+        $recipe = Recipe::findOrFail($id);
+
+        return view('recipe/show', [
+            'recipe' => $recipe,
+        ]);
+    }
 }

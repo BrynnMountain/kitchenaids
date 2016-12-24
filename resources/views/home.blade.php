@@ -16,7 +16,7 @@
                         <div class="panel-body">
                             <div class="list-group">
                                 @foreach($box->recipes as $recipe)
-                                    <a href="#" class="list-group-item">{{$recipe->name}}</a>
+                                    <a href="/recipes/{{$recipe->id}}" class="list-group-item">{{$recipe->name}}</a>
                                 @endforeach
                                 <a class="list-group-item" href="/box/{{$box->id}}/recipe/create"><span class="text-primary"><i class="fa fa-plus-circle" aria-hidden="true"></i> Add New Recipe</span></a>
                             </div>
