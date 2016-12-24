@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->middleware('guest');
 
 Route::get('/about', function () {
     return view('/pages/about');
@@ -35,4 +35,5 @@ Route::post('/box/create', 'BoxController@store');
 // Recipe Routes
 Route::get('/box/{id}/recipe/create', 'RecipeController@create');
 Route::post('/recipe/create', 'RecipeController@store');
-Route::get('/recipes/{id}', 'RecipeController@show');
+Route::get('/recipe/{id}', 'RecipeController@show');
+Route::get('/recipe/{id}/delete', 'RecipeController@destroy');

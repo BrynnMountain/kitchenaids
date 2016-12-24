@@ -8,6 +8,8 @@ use App\Http\Requests;
 
 use App\Recipe;
 
+use Auth;
+
 class RecipeController extends Controller
 {
      /**
@@ -17,7 +19,7 @@ class RecipeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth')->except('show');
     }
 
     public function create($id)
@@ -50,5 +52,16 @@ class RecipeController extends Controller
         return view('recipe/show', [
             'recipe' => $recipe,
         ]);
+    }
+
+    public function destroy($id)
+    {
+        $recipe = Recipe::findOrFail($id);
+
+        if (Auth::id() == $recipe->box->user_id)
+        {
+            $recipe->delete();
+        }
+        return redirect('/home');
     }
 }

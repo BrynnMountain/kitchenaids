@@ -10,5 +10,13 @@
             </div> <!-- .panel -->
         </div>
     </div>
+    @if (Auth::id() == $recipe->box->user_id)
+    <div class="row">
+        <div class="col-xs-12 btn-toolbar">
+            <a class="create-btn btn btn-danger pull-right" href="/recipe/{{$recipe->id}}/delete">Delete</a>
+        </div>
+    </div>
+    @endif
 </div>
+
 @endsection
